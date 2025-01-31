@@ -27,7 +27,8 @@ download `ddex4.theme.css` and put it in your local themes.
 
 download `ddex4.theme.css` and put it in your themes folder.
 
-
+## Support
+[join](https://discord.gg/KEcCnVuTV7)
 
 
     
