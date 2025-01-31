@@ -10,3 +10,16 @@
  */
  
 @import url(https://blade0.github.io/ddex4/import.css);
+
+/* change USERNAME to your username */
+[data-author-username="the.rabbit.disabler"] {
+/*------------------------------------------------------------------ */
+[class^=contents_]>[class*=messageContent_]:not(:empty) {
+  background: var(--brand-500);
+  -ms-flex-align: end;
+  color: var(--onPrimary);
+}
+[class^=contents_]:hover>[class*=messageContent_]:not(:empty) {
+  background: var(--brand-600);
+}
+}
