@@ -17,7 +17,7 @@ DDEX4 is designed for Discord's Visual Refresh! This can be enabled by doing the
 
 ### Vencord
 
-add `https://blade0.github.io/ddex4/import.css` to your online themes
+add `https://blade04208.github.io/ddex4/import.css` to your online themes
 
 **OR**
 
