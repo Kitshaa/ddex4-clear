@@ -6,6 +6,7 @@ Discord's scrapped Design Experiment V4, made real.
 ![GitHub License](https://img.shields.io/github/license/blade04208/ddex4?style=flat-square)
  ![GitHub last commit](https://img.shields.io/github/last-commit/blade04208/ddex4?style=flat-square) ![Discord](https://img.shields.io/discord/1334998273437597767?style=flat-square&label=Discord) ![GitHub repo size](https://img.shields.io/github/repo-size/blade04208/ddex4?style=flat-square) ![Static Badge](https://img.shields.io/badge/skill-issue-red?style=flat-square)
 
+![Thumbnail](/src/thumb.png)
 
 ## Installation
 
