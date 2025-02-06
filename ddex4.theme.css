@@ -20,7 +20,6 @@
    --show-memberlist-rpc: none;
 }
 /* change USERNAME to your username */
-/* change USERNAME to your username */
 [data-author-username="USERNAME"] {
-/*-------------do not touch or you will explode :3------------------------------------------- */
-[class^=contents_]>[class*=messageContent_] {:not(:empty) & {background: var(--brand-500);  -ms-flex-align: end;  color: #ffffff;&:hover {background: var(--brand-600);}}}}
+/*------------------------------------------------------------------ */
+[class^=contents_]>[class*=messageContent_]:not(:empty) {background: var(--brand-500);}[class^=contents_]:hover>[class*=messageContent_]:not(:empty) {background: var(--brand-600);}}
