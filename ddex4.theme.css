@@ -3,7 +3,7 @@
  * @description Discord's scrapped Design Experiment V4, made real.
  * @author Blade0
  * @authorId 1124341362955919371
- * @version 1.0.0
+ * @version 1.1.0
  * @updateUrl https://blade04208.github.io/ddex4/ddex4.theme.css
  * @source https://github.com/Blade04208/ddex4
  * @invite KEcCnVuTV7
@@ -11,6 +11,11 @@
  
 @import url(https://blade04208.github.io/ddex4/import.css);
 @import url(https://blade04208.github.io/ddex4/src/bubbles.css);
+:root {
+  /*  DDEX4 has background support! just uncomment and change the below
+      URL to any color **OR** tiling image and it will be applied to the background  */
+  /* --bg-base-tertiary: url(https://1-background.com/images/stars-1/stars-background-purple.jpg) !important; */
+}
 /* change USERNAME to your username */
 [data-author-username="the.rabbit.disabler"] {
 /*------------------------------------------------------------------ */
