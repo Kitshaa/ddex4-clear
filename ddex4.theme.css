@@ -3,7 +3,7 @@
  * @description Discord's scrapped Design Experiment V4, made real.
  * @author Blade0
  * @authorId 1124341362955919371
- * @version 1.1.0
+ * @version 1.1.1
  * @updateUrl https://blade04208.github.io/ddex4/ddex4.theme.css
  * @source https://github.com/Blade04208/ddex4
  * @invite KEcCnVuTV7
@@ -15,19 +15,12 @@
   /*  DDEX4 has background support! just uncomment and change the below
       URL to any color **OR** tiling image and it will be applied to the background  */
   /* --bg-base-tertiary: url(https://1-background.com/images/stars-1/stars-background-purple.jpg) !important; */
+
+ /* set "none" to "block" to show status in the memberlist */
+   --show-memberlist-rpc: none;
 }
 /* change USERNAME to your username */
-[data-author-username="the.rabbit.disabler"] {
-/*------------------------------------------------------------------ */
-[class^=contents_]
->[class*=messageContent_] {
-:not(:empty) {
-  background: var(--brand-500);
-  -ms-flex-align: end;
-  color: var(--onPrimary);
-  }
-  &:hover>[class*=messageContent_]:not(:empty) {
-  background: var(--brand-600);
-}
-}
-}
+/* change USERNAME to your username */
+[data-author-username="USERNAME"] {
+/*-------------do not touch or you will explode :3------------------------------------------- */
+[class^=contents_]>[class*=messageContent_] {:not(:empty) & {background: var(--brand-500);  -ms-flex-align: end;  color: #ffffff;&:hover {background: var(--brand-600);}}}}
