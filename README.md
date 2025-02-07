@@ -35,9 +35,11 @@ download `ddex4.theme.css` and put it in your themes folder.
     
 ## Todo
 
-[ ] fix lag dear god
-[ ] fix buggeth
-[ ] add actual cut-off-notch support to the server list
+- [X] fix lag dear god
+- [ ] fix buggeth
+- [ ] add actual cut-off-notch support to the server list
+just see https://trello.com/b/2dKqp9t6/ddex4-management, submist issues if you find more bugs
+
 ## Contributing
 
 you can contribute to either fix bugs, make faster, or make it closer-looking to the original theme
