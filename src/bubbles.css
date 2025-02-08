@@ -250,3 +250,15 @@
   bottom: 8px;
   /* bring pfp to bottom of messages */
 }
+.messageListItem__5126c {
+  &[data-is-self="true"]>.message__5126c:not(.groupStart__5126c) 
+  .contents_c19a55>.messageContent_c19a55:not(:empty) {
+    border-top-right-radius: 0px;
+      border-top-left-radius: 8px !important;
+  }
+>.message__5126c:not(.groupStart__5126c)
+ [class^=contents_]>[class*=messageContent_]:not(:empty) {
+  border-top-left-radius: 0px !important;
+
+}
+}
