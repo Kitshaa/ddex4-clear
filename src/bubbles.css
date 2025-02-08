@@ -245,3 +245,8 @@
     margin-top: 10px;
   }
 }
+.avatar_c19a55,
+.avatarDecoration_c19a55 {
+  bottom: 8px;
+  /* bring pfp to bottom of messages */
+}
