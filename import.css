@@ -30,6 +30,13 @@ html:not(.visual-refresh).show-redesigned-icons body::before {
   --bg-surface-overlay: var(--background-surface-higher) !important;
   --bg-surface-raised: var(--background-surface-higher) !important;
   --chat-background-default: var(--background-base-lower) !important;
+  --background-primary: var(--background-base-lower);
+  --background-secondary: var(--bg-base-tertiary);
+  --background-tertiary: var(--bg-base-tertiary);
+  --background-secondary-alt: var(--background-surface-higher);
+  --modal-background: var(--background-floating);
+  --modal-footer-background: var(--background-floating);
+  --background-base-low: var(--background-base-lower);
   /* make darker OGG DDEX4 colors, who needs another import */
 }
 
@@ -43,6 +50,11 @@ html:not(.visual-refresh).show-redesigned-icons body::before {
   /* resize members in list to prevent --show-memberlist-rpc fucking upping  */
 }
 
+.members_c8ffbb {
+  left: -4px;
+  width: calc(100% + 8px);
+}
+
 .subText__91a9d {
   display: var(--show-memberlist-rpc);
   /* how --show-memberlist-rpc actually works  */
@@ -51,16 +63,18 @@ html:not(.visual-refresh).show-redesigned-icons body::before {
 .page_c48ade {
   overflow: visible !important;
   box-sizing: content-box;
-  height: calc(100vh - 32px) !important;
+  height: calc(100vh - 33px) !important;
 }
 
 .content_f75fb0>.chatContent_f75fb0,
 .container_f369db,
-.callContainer_cb9592 {
+.callContainer_cb9592,
+.contentRegion__23e6b {
   margin: 0 8px 24px 8px;
   border-radius: 0 0 16px 16px;
   box-shadow: 8px 8px 32px rgba(0, 0, 0, 0.25);
   overflow: hidden;
+  z-index: 100;
   /* windowizes chat  */
 }
 
@@ -77,9 +91,16 @@ html:not(.visual-refresh).show-redesigned-icons body::before {
   height: calc(100% - 24px);
   border-radius: 0 0 16px 16px;
 }
+
 .form_f75fb0::before {
-display: none;
+  display: none;
 }
+
+.visual-refresh .markup__75297 code {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
 .channelBottomBarArea_f75fb0 {
   margin: 0 !important;
   border-top: 1px solid var(--border-subtle);
@@ -99,17 +120,20 @@ display: none;
 }
 
 .base_c48ade:has(.headerButton_f37cb1[aria-label="Blade0's Theme Server, server actions"]) {
-  background-image: linear-gradient(to bottom, transparent 0%, var(--bg-base-tertiary) 75%),url(https://blade04208.github.io/ddex4/src/serverwall.jpg)!important;
+  background-image: linear-gradient(to bottom, transparent 0%, var(--bg-base-tertiary) 75%), url(https://blade04208.github.io/ddex4/src/serverwall.jpg) !important;
   background-repeat: no-repeat;
   background-size: cover;
   --background-base-lower: rgba(255, 255, 255, 0.1);
+
   .channelTextArea_f75fb0 {
     background-color: transparent;
   }
+
   .chatContent_f75fb0,
   .subtitleContainer_f75fb0 {
     backdrop-filter: blur(20px);
   }
+
   .title_f75fb0,
   .subtitleContainer_f75fb0 {
     border: none;
@@ -132,6 +156,7 @@ display: none;
   margin: 8px 0 0 8px;
   width: calc(100% - var(--custom-member-list-width) - 16px);
   /* adjust size of title to align with chat content */
+  z-index: 101;
 }
 
 .chat_f75fb0:not(:has(.membersWrap_c8ffbb)) .subtitleContainer_f75fb0 {
@@ -140,15 +165,13 @@ display: none;
   /* reseize it for no memberlist */
 }
 
-.page_c48ade {
-  z-index: 1000;
-  /* TODO: FIX SHADOW [@1]*/
-}
+
 
 .sidebar_c48ade[data-collapsed="false"] .sidebarResizeHandle_c48ade {
-  transform: translateX(3px);
   pointer-events: all;
-  /* TODO: MAKE SIZEBAR RESIZE HANDLE GO ON SIDE OF CHATBOX [@2] */
+  z-index: 2000;
+  position: fixed;
+  left: calc(var(--custom-guild-sidebar-width) + 4px);
 }
 
 .content_c48ade:has([data-collapsed="true"]) .chatContent_f75fb0,
@@ -162,9 +185,19 @@ display: none;
   /* resize subtitle to accomadate collapsed serverlist */
 }
 
+.content_c48ade:not(:has([data-collapsed="false"], .membersWrap_c8ffbb)) .subtitleContainer_f75fb0 {
+  width: calc(100% - 8px);
+  /* resize subtitle to accomadate collapsed serverlist */
+}
+
 .title_f75fb0 {
   border-radius: 16px 16px 0 0;
   /* make title actually be rounded becuase it uhh fuck askjz\dagfweqdiohfyivhwebqwdhi */
+}
+
+.upperContainer__9293f {
+  overflow: hidden;
+  justify-content: end;
 }
 
 .container_c8ffbb,
@@ -190,7 +223,9 @@ display: none;
 .privateChannels__35e86,
 .itemsContainer_ef3116,
 .sectionDivider__629e4,
-.resizeHandle__01ae2 {
+.resizeHandle__01ae2,
+.wrapper_cb9592,
+.root_bfe55a {
   background: transparent !important;
   /* hmmm i wonder what this does */
 }
@@ -239,9 +274,12 @@ display: none;
       display: none;
     }
 
-    /* make the pfp smaller and removes status dot
-  TODO: FIX [@4] */
+    /* make the pfp smaller and removes status dot */
   }
+}
+
+.wrapper_cb9592 .root_bfe55a {
+  background: #000000 !important;
 }
 
 .container__37e49 {
@@ -350,6 +388,7 @@ div:not(.imageContainer_ef9ae7)>.contentImage__42bf5 {
   padding-left: 16px;
   height: 120px;
   border-radius: 0px 12px 12px 0px;
+  border: none !important;
 
   &::after {
     z-index: -1;
@@ -360,9 +399,10 @@ div:not(.imageContainer_ef9ae7)>.contentImage__42bf5 {
     top: 0;
     right: 0px;
     left: 0px;
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(34, 64, 122, 0.6)), linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .7));
+    background: linear-gradient(rgba(0, 0, 0, 0), var(--brand-700)), linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .7));
     background-blend-mode: screen, difference, ligthen;
     border-radius: 0px 0px 0 0;
+    opacity: 0.6;
   }
 
   .infoSection__0f2e8 {
@@ -894,17 +934,20 @@ div[style="height: 135px;"] {
 
 .quickswitcher_ac6cb0 {
   border: none !important;
---interactive-normal: rgba(255, 255, 255, 0.8);
---header-primary: #ffffff;
---text-normal: #ffffff;
+  --interactive-normal: rgba(255, 255, 255, 0.8);
+  --header-primary: #ffffff;
+  --text-normal: #ffffff;
+
   .input_ac6cb0 {
     background: rgba(0, 0, 0, 0.5);
     font-size: 18px;
     height: 52px;
   }
-.autocompleteQuerySymbol_ac6cb0 {
-  background-color: rgba(0, 0, 0, 0.25);
-}
+
+  .autocompleteQuerySymbol_ac6cb0 {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
   /* makes quickswitcher fancy */
 }
 
@@ -918,6 +961,16 @@ div[style="height: 135px;"] {
 
 .sidebarRegion__23e6b {
   max-width: 300px;
+
+  &::after {
+    content: ' ';
+    background: linear-gradient(to bottom, var(--bg-base-tertiary) 20%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    width: 350px;
+    height: 100px;
+    top: 0;
+    left: 0;
+  }
 
   .sidebarRegionScroller__23e6b {
     justify-content: flex-start;
@@ -938,6 +991,9 @@ div[style="height: 135px;"] {
   }
 
   /* makes sidebar big, adds channel styling */
+  .searchBar_c7e907 {
+    margin-right: 16px;
+  }
 
   .mask__68edb {
     height: 100px;
@@ -966,12 +1022,6 @@ div[style="height: 135px;"] {
   width: calc(100% - 300px) !important;
   max-width: none;
   /* make content wide but dynamic */
-}
-
-.avatar_c19a55,
-.avatarDecoration_c19a55 {
-  bottom: 8px;
-  /* bring pfp to bottom of messages */
 }
 
 .reaction__23977,
@@ -1064,6 +1114,10 @@ div[style="height: 135px;"] {
     border: none;
     padding: 12px 24px;
     border-radius: 12px;
+
+    &:hover {
+      background: var(--brand-400);
+    }
   }
 
   .channel_d5f3cd,
@@ -1094,4 +1148,24 @@ div[style="height: 135px;"] {
       }
     }
   }
+}
+
+.page_c48ade:has(.container__133bf, .applicationStore_f07d62, .shopViewWrapper__6db1d, .chat_f75fb0 .tabBar__0b563, .mainTableContainer__09a38, .background__7449f) {
+  margin: 0 8px 24px 8px;
+  border-radius: 16px !important;
+  width: calc(100% - 16px);
+  overflow: hidden !important;
+  box-shadow: 8px 8px 32px rgba(0, 0, 0, 0.25);
+  height: calc(100vh - 56px) !important;
+  background: var(--background-base-lower);
+}
+
+.fullScreen_cb9592 .callContainer_cb9592 {
+  margin-top: 12px;
+  height: 100%;
+}
+
+.contentRegion__23e6b {
+  margin: 10px 10px 10px 0px;
+  border-radius: 16px;
 }
