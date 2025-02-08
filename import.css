@@ -4,13 +4,31 @@
   --userbanner-blur: 0px;
 }
 
+html:not(.visual-refresh).show-redesigned-icons body::before {
+  position: fixed;
+  content: "YOU ARE NOT ON VISUAL-REFRESH! Enable visual-refresh by getting the experiments plugin, scrolling to experiments and searching for 2024-05_desktop_visual_refresh, clicking on the result and setting the Bucket Override to Treatment 2. Next time, try reading the README!";
+  z-index: 99999;
+  color: #ffffff;
+  top: 8px;
+  left: 8px;
+  background-color: var(--status-danger);
+  padding: 40px;
+  max-width: calc(100vw - 55px);
+  user-select: text;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 30pt;
+  /* politely ask people to use visual-refresh */
+}
+
 .theme-darker:not(.custom-theme-background) {
   --bg-base-tertiary: #171717 !important;
+  --background-base-lowest: var(--bg-base-tertiary) !important;
   --background-base-lower: #272727 !important;
   --background-surface-higher: #2c2c2c !important;
-  --background-floating: #2c2c2c !important;
-  --bg-surface-overlay: #2c2c2c !important;
-  --bg-surface-raised: #2c2c2c !important;
+  --background-floating: var(--background-surface-higher) !important;
+  --bg-surface-overlay: var(--background-surface-higher) !important;
+  --bg-surface-raised: var(--background-surface-higher) !important;
   --chat-background-default: var(--background-base-lower) !important;
   /* make darker OGG DDEX4 colors, who needs another import */
 }
@@ -30,12 +48,31 @@
   /* how --show-memberlist-rpc actually works  */
 }
 
-.chatContent_f75fb0 {
+.page_c48ade {
+  overflow: visible !important;
+  box-sizing: content-box;
+  height: calc(100vh - 32px) !important;
+}
+
+.content_f75fb0>.chatContent_f75fb0,
+.container_f369db,
+.callContainer_cb9592 {
   margin: 0 8px 24px 8px;
   border-radius: 0 0 16px 16px;
   box-shadow: 8px 8px 32px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   /* windowizes chat  */
+}
+.callContainer_cb9592 {
+    border-radius: 16px!important;
+}
+.chat_f75fb0:has(.callContainer_cb9592) .container__01ae2 {
+margin-top: 0px;
+}
+.content_f75fb0 .outer_c0bea0 {
+  margin: 0 8px 0 0;
+  height: calc(100% - 24px);
+  border-radius: 0 0 16px 16px;
 }
 
 .channelBottomBarArea_f75fb0 {
@@ -44,9 +81,26 @@
 
   .channelTextArea_f75fb0 {
     border-radius: 0 !important;
+    border: none;
+  }
+
+  .accessoryBar__74017 {
+    margin: 0;
+    padding: 8px 16px;
+    border-top: 1px solid var(--border-faint);
   }
 
   /* makes message box stick to bottom */
+}
+
+.container__01ae2 {
+  margin: 8px 8px 24px 0;
+  border-radius: 16px;
+  overflow: hidden;
+
+  &.floating__01ae2 {
+    margin: 16px 16px 32px 0;
+  }
 }
 
 .subtitleContainer_f75fb0 {
@@ -110,7 +164,8 @@
 .scroller__99e7c,
 .privateChannels__35e86,
 .itemsContainer_ef3116,
-.sectionDivider__629e4 {
+.sectionDivider__629e4,
+.resizeHandle__01ae2 {
   background: transparent !important;
   /* hmmm i wonder what this does */
 }
@@ -128,14 +183,9 @@
 .container__2637a,
 .sidebarList_c48ade,
 .biteSize_c0bea0 .body__5be3e,
-.chat_f75fb0 {
+.chat_f75fb0,
+[id^="folder-items-"] {
   overflow: visible !important;
-}
-
-
-li:has([data-list-item-id^="channels___boosts-"]) {
-  order: 10;
-  /* TODO: MAKE SERVER ACTION TABS GO ABOVE BOOSTS [@3] */
 }
 
 .panels_c48ade {
@@ -188,7 +238,8 @@ li:has([data-list-item-id^="channels___boosts-"]) {
 
 .guilds_c48ade {
   top: -36px;
-  height: calc(100% - 29px);
+  height: calc(100% - 36px);
+  border-right: 1px solid var(--border-subtle);
 
   .stack_dbd263 {
     padding-top: 36px;
@@ -197,14 +248,22 @@ li:has([data-list-item-id^="channels___boosts-"]) {
   z-index: 1;
   /* makes guild list not a sack of shit and utilize the whole window to scroll */
 }
-
-a.link__2ea32 {
+.sidebar_c48ade:has(.panels_c48ade) .guilds_c48ade {
+  height: calc(100% - 134px);
+}
+a.link__2ea32,
+.typeThread__2ea32 .link__2ea32 {
   padding: 8px 8px;
   border-radius: 12px 0 0 12px;
   /* biggerize channels */
 }
 
-.modeSelected__2ea32 a.link__2ea32 {
+.spine__5b40b {
+  height: 24px;
+}
+
+.modeSelected__2ea32 a.link__2ea32,
+.modeSelected__2ea32.typeThread__2ea32 .link__2ea32 {
   background-color: var(--brand-500);
 
   &:hover {
@@ -240,7 +299,9 @@ a.link__2ea32 {
   /* makes channel list connect to chat */
 }
 
-
+.scroller__99e7c {
+  margin-bottom: var(--custom-app-panels-height)!important;
+}
 /*cards and member list and more not commented bc i didnt make this */
 div:not(.imageContainer_ef9ae7)>.contentImage__42bf5 {
   left: 0px;
@@ -467,9 +528,40 @@ li:has(.containerDefault_c69b6d .focusTarget__89030) {
   /* turns server action tabs to funny buttons, per-button styling */
 }
 
-.sectionDivider__629e4 {
-  margin-top: 51px;
+.content__99f8c .sectionDivider__629e4 {
+  margin-top: 36px;
   /* adds margin to adjust for funny server action tabs */
+}
+
+.content__99f8c:has([data-list-item-id^="channels___boosts-"]) .sectionDivider__629e4 {
+  margin-top: calc(36px + 48px);
+}
+
+li:has([data-list-item-id^="channels___boosts-"]) {
+  overflow: visible;
+  height: 0px !important;
+
+  [data-list-item-id^="channels___boosts-"] {
+    padding-top: 48px;
+    pointer-events: none;
+
+    .textArea_eff079 {
+      pointer-events: all;
+    }
+
+    .progressBarContainer_eff079 {
+      pointer-events: all;
+      margin-top: 0;
+      padding-top: var(--space-8);
+      background-color: transparent !important;
+    }
+  }
+
+  /* TODO: MAKE SERVER ACTION TABS GO ABOVE BOOSTS [@3] */
+}
+
+div[style="height: 12px;"] {
+  height: 4px !important;
 }
 
 [data-list-item-id^="channels___boosts-"] {
@@ -637,7 +729,7 @@ div[style="height: 135px;"] {
 
 .listItem__650eb:has(.lowerBadge_cc5dd2) .pill_e5445c:not(:has([style="opacity: 1; height: 40px; transform: none;"])) span {
   display: none;
-    /* remove for pings */
+  /* remove for pings */
 }
 
 .listItem__650eb:hover .pill_e5445c:not(:has([style="opacity: 1; height: 40px; transform: none;"])),
@@ -654,6 +746,7 @@ div[style="height: 135px;"] {
     transform: none !important;
     border: 2px solid rgba(255, 255, 255, 0.7);
   }
+
   /* add more general dot-to-pill */
 }
 
@@ -686,7 +779,7 @@ div[style="height: 135px;"] {
   height: 30px;
   border-bottom-right-radius: 20px;
   box-shadow: 15px 15px 0 15px var(--background-accent);
-    /* open server thinger rounding */
+  /* open server thinger rounding */
 }
 
 .pill_e5445c [style="opacity: 1; height: 40px; transform: none;"]::before {
@@ -694,7 +787,7 @@ div[style="height: 135px;"] {
   border-bottom-right-radius: 0;
   border-top-right-radius: 20px;
   box-shadow: 15px -15px 0 15px var(--background-accent);
-    /* open server thinger */
+  /* open server thinger */
 }
 
 @keyframes pillAnimateIn {
@@ -702,6 +795,7 @@ div[style="height: 135px;"] {
     opacity: 0;
     transform: translateX(10%);
   }
+
   /* open server animation */
 }
 
@@ -766,6 +860,7 @@ div[style="height: 135px;"] {
       }
     }
   }
+
   /* make theme switchers be little menu things */
 }
 
@@ -777,6 +872,7 @@ div[style="height: 135px;"] {
     font-size: 18px;
     height: 52px;
   }
+
   /* makes quickswitcher fancy */
 }
 
@@ -808,6 +904,7 @@ div[style="height: 135px;"] {
       }
     }
   }
+
   /* makes sidebar big, adds channel styling */
 
   .mask__68edb {
@@ -823,6 +920,7 @@ div[style="height: 135px;"] {
       }
     }
   }
+
   /* make account card be scale-adjustable */
 
   .thin_d125d2::-webkit-scrollbar {
@@ -835,7 +933,7 @@ div[style="height: 135px;"] {
   min-width: 0px;
   width: calc(100% - 300px) !important;
   max-width: none;
-/* make content wide but dynamic */
+  /* make content wide but dynamic */
 }
 
 .avatar_c19a55,
@@ -861,6 +959,7 @@ div[style="height: 135px;"] {
   max-height: 40px !important;
   padding: 2px;
   background-color: var(--background-surface-higher);
+  background-color: rgb(var(--bg-overlay-color-inverse) / var(--bg-overlay-opacity-6));
   border: none;
   border-radius: 12px;
 
@@ -888,5 +987,79 @@ div[style="height: 135px;"] {
       background-image: url("data:image/svg+xml,%3Csvg%20x%3D%220%22%20y%3D%220%22%20class%3D%22icon__9293f%22%20aria-hidden%3D%22true%22%20role%3D%22img%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M9.7%202.89c.18-.07.32-.24.37-.43a2%202%200%200%201%203.86%200c.05.2.19.36.38.43A7%207%200%200%201%2019%209.5v2.09c0%20.12.05.24.13.33l1.1%201.22a3%203%200%200%201%20.77%202.01v.28c0%20.67-.34%201.29-.95%201.56-1.31.6-4%201.51-8.05%201.51-4.05%200-6.74-.91-8.05-1.5-.61-.28-.95-.9-.95-1.57v-.28a3%203%200%200%201%20.77-2l1.1-1.23a.5.5%200%200%200%20.13-.33V9.5a7%207%200%200%201%204.7-6.61ZM9.18%2019.84A.16.16%200%200%200%209%2020a3%203%200%201%200%206%200c0-.1-.09-.17-.18-.16a24.86%2024.86%200%200%201-5.64%200Z%22%20class%3D%22%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
     }
   }
+
   /* turn vc read message button into a server-like */
+}
+
+.wrapper_d5f3cd {
+  border-radius: 12px !important;
+  direction: ltr;
+  text-align: start;
+  overflow: hidden;
+
+  .header_d5f3cd {
+    display: none;
+  }
+
+  .inviteSplash_d5f3cd {
+    z-index: 0;
+    transform-origin: top left;
+    left: -16px;
+    top: -16px;
+    bottom: 0;
+    position: relative;
+    height: 0;
+    margin: 0 !important;
+    overflow: visible !important;
+
+    img {
+      width: calc(100% + 32px);
+      height: 84px;
+      opacity: 1;
+      filter: brightness(0.4);
+    }
+  }
+
+  .content_d5f3cd {
+    z-index: 10;
+    text-shadow: #000000;
+    flex-wrap: nowrap;
+    gap: 0px;
+  }
+
+  .colorGreen__201d5 {
+    background: var(--brand-500);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+  }
+
+  .channel_d5f3cd,
+  .statusCounts_d5f3cd {
+    display: none;
+  }
+
+  .headerLine_ae2544 {
+    width: 50%;
+  }
+
+  .inviteDestination_d5f3cd {
+    margin: 0;
+    font-size: large;
+    font-weight: 500;
+    text-shadow: 0px 0px 10px#00000080;
+    overflow: visible;
+
+    .infoTitle_ae2544 {
+      overflow: visible;
+
+      .guildNameWrapper_d5f3cd {
+        overflow: visible;
+
+        .guildName_d5f3cd {
+          overflow: visible;
+        }
+      }
+    }
+  }
 }
