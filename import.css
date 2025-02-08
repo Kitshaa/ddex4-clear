@@ -22,7 +22,7 @@ html:not(.visual-refresh).show-redesigned-icons body::before {
 }
 
 .theme-darker:not(.custom-theme-background) {
-  --bg-base-tertiary: #171717 !important;
+  --bg-base-tertiary: #171717;
   --background-base-lowest: var(--bg-base-tertiary) !important;
   --background-base-lower: #272727 !important;
   --background-surface-higher: #2c2c2c !important;
@@ -63,18 +63,23 @@ html:not(.visual-refresh).show-redesigned-icons body::before {
   overflow: hidden;
   /* windowizes chat  */
 }
+
 .callContainer_cb9592 {
-    border-radius: 16px!important;
+  border-radius: 16px !important;
 }
+
 .chat_f75fb0:has(.callContainer_cb9592) .container__01ae2 {
-margin-top: 0px;
+  margin-top: 0px;
 }
+
 .content_f75fb0 .outer_c0bea0 {
   margin: 0 8px 0 0;
   height: calc(100% - 24px);
   border-radius: 0 0 16px 16px;
 }
-
+.form_f75fb0::before {
+display: none;
+}
 .channelBottomBarArea_f75fb0 {
   margin: 0 !important;
   border-top: 1px solid var(--border-subtle);
@@ -91,6 +96,26 @@ margin-top: 0px;
   }
 
   /* makes message box stick to bottom */
+}
+
+.base_c48ade:has(.headerButton_f37cb1[aria-label="Blade0's Theme Server, server actions"]) {
+  background-image: linear-gradient(to bottom, transparent 0%, var(--bg-base-tertiary) 75%),url(https://blade04208.github.io/ddex4/src/serverwall.jpg)!important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  --background-base-lower: rgba(255, 255, 255, 0.1);
+  .channelTextArea_f75fb0 {
+    background-color: transparent;
+  }
+  .chatContent_f75fb0,
+  .subtitleContainer_f75fb0 {
+    backdrop-filter: blur(20px);
+  }
+  .title_f75fb0,
+  .subtitleContainer_f75fb0 {
+    border: none;
+    border-radius: 16px 16px 0px 0px;
+    overflow: hidden;
+  }
 }
 
 .container__01ae2 {
@@ -248,9 +273,11 @@ margin-top: 0px;
   z-index: 1;
   /* makes guild list not a sack of shit and utilize the whole window to scroll */
 }
+
 .sidebar_c48ade:has(.voiceButtonsContainer_e131a9) .guilds_c48ade {
   height: calc(100% - 134px);
 }
+
 a.link__2ea32,
 .typeThread__2ea32 .link__2ea32 {
   padding: 8px 8px;
@@ -300,8 +327,9 @@ a.link__2ea32,
 }
 
 .scroller__99e7c {
-  margin-bottom: var(--custom-app-panels-height)!important;
+  margin-bottom: var(--custom-app-panels-height) !important;
 }
+
 /*cards and member list and more not commented bc i didnt make this */
 div:not(.imageContainer_ef9ae7)>.contentImage__42bf5 {
   left: 0px;
@@ -866,19 +894,23 @@ div[style="height: 135px;"] {
 
 .quickswitcher_ac6cb0 {
   border: none !important;
-
+--interactive-normal: rgba(255, 255, 255, 0.8);
+--header-primary: #ffffff;
+--text-normal: #ffffff;
   .input_ac6cb0 {
-    background: var(--bg-base-tertiary);
+    background: rgba(0, 0, 0, 0.5);
     font-size: 18px;
     height: 52px;
   }
-
+.autocompleteQuerySymbol_ac6cb0 {
+  background-color: rgba(0, 0, 0, 0.25);
+}
   /* makes quickswitcher fancy */
 }
 
 .layerContainer_da8173:has(.quickswitcher_ac6cb0) .backdrop__78332 {
-  background: none !important;
-  backdrop-filter: blur(8px) !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(16px) !important;
   /* adds blur to quickswitcher */
 }
 
@@ -959,7 +991,7 @@ div[style="height: 135px;"] {
   max-height: 40px !important;
   padding: 2px;
   background-color: var(--background-surface-higher);
-  background-color: rgb(var(--bg-overlay-color-inverse) / var(--bg-overlay-opacity-6));
+  background-color: rgb(var(--bg-overlay-opacity-6));
   border: none;
   border-radius: 12px;
 
