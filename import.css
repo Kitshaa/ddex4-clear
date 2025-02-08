@@ -248,7 +248,7 @@ margin-top: 0px;
   z-index: 1;
   /* makes guild list not a sack of shit and utilize the whole window to scroll */
 }
-.sidebar_c48ade:has(.panels_c48ade) .guilds_c48ade {
+.sidebar_c48ade:has(.voiceButtonsContainer_e131a9) .guilds_c48ade {
   height: calc(100% - 134px);
 }
 a.link__2ea32,
