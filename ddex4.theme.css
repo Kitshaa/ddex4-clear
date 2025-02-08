@@ -16,10 +16,17 @@
   /*  DDEX4 has background support! just uncomment and change the below
       URL to any color **OR** tiling image and it will be applied to the background  */
   /* --bg-base-tertiary: url(https://1-background.com/images/stars-1/stars-background-purple.jpg) !important; */
-   --show-memberlist-rpc: none;  /* set "none" to "block" to show status in the memberlist */
-   --userbanner-blur: 20px; /* set to 0 to remove blur on banners */
+
+   --show-memberlist-rpc: none;          /* set "none" to "block" to show status in the memberlist */
+   --userbanner-blur: 20px;              /* set to 0 to remove blur on banners */
 }
-/* change USERNAME to your username */
-[data-author-username="USERNAME"] {
-/*------------------------------------------------------------------ */
-[class^=contents_]>[class*=messageContent_]:not(:empty) {background: var(--brand-500);}[class^=contents_]:hover>[class*=messageContent_]:not(:empty) {background: var(--brand-600);}}
+.theme-dark {
+  --msgbg: var(--brand-500);             /* BG for own messages,         dark mode */
+  --msghv: var(--brand-600);             /* hover BG for own messages,   dark mode */
+  --msgfg: #ffffff;                      /* text color for own messages, dark mode */
+}
+.theme-light {
+  --msgbg: var(--brand-400);             /* BG for own messages,         light mode */
+  --msghv: var(--brand-500);             /* hover BG for own messages,   light mode */
+  --msgfg: var(--brand-1000);            /* text color for own messages, light mode */
+}
