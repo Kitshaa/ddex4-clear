@@ -24,18 +24,33 @@
 [class^=contents_]>[class*=messageContent_]:not(:empty) {
   margin-left: 0;
   padding: 12px 16px;
-  background: rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
   border-bottom-left-radius: 0px !important;
   display: inline-block;
   max-width: calc(100% - 24px);
-  box-shadow: 0px 10px 21px 13px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  box-shadow: 4px 4px 21px 13px rgba(0, 0, 0, 0.05);
 }
 
  [class^=contents_]:hover>[class*=messageContent_]:not(:empty) {
-  background: rgba(0, 0, 0, 0.35);
+     background: rgba(0, 0, 0, 0.1);
+}
+.theme-light {
+[class^=contents_]>[class*=messageContent_]:not(:empty) {
+  margin-left: 0;
+  padding: 12px 16px;
+  border-bottom-left-radius: 0px !important;
+  display: inline-block;
+  max-width: calc(100% - 24px);
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  box-shadow: 4px 4px 21px 13px rgba(0, 0, 0, 0.05);
 }
 
+ [class^=contents_]:hover>[class*=messageContent_]:not(:empty) {
+     background: rgba(0, 0, 0, 0.2);
+}
+}
  [class*=mentioned_] [class^=contents_]>[class*=messageContent_]:not(:empty) {
   background: rgba(255, 200, 0, 0.25);
 }
@@ -108,7 +123,7 @@
 #app-mount .messageListItem__5126c[data-is-self="true"] .repliedMessage_c19a55 {
   margin-left: auto;
   border-bottom-right-radius: 0px !important;
-  border-bottom-left-radius: 08px !important;
+  border-bottom-left-radius: 12px !important;
 }
 
 #app-mount .messageListItem__5126c[data-is-self="true"] .embedAuthor__623de {
@@ -252,7 +267,7 @@
   &[data-is-self="true"]>.message__5126c:not(.groupStart__5126c) 
   .contents_c19a55>.messageContent_c19a55:not(:empty) {
     border-top-right-radius: 0px;
-      border-top-left-radius: 8px !important;
+      border-top-left-radius: 12px !important;
   }
 >.message__5126c:not(.groupStart__5126c)
  [class^=contents_]>[class*=messageContent_]:not(:empty) {
