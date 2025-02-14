@@ -10,36 +10,31 @@ Discord's scrapped Design Experiment V4, made real.
 
 ## Installation
 
-DDEX4 is designed for Discord's Visual Refresh! This can be enabled by doing the following:
-1. Enable/install the plugin in your client mod that allows Discord Experiments to be shown
-2. Open **User Settings** and scroll to **Experiments**
-3. Search `2024-05_desktop_visual_refresh`
-4. Click on the result and set the **Bucket Override** to **Treatment 2**.
+DDEX4 is designed for Discord's Visual Refresh! Instructions for eact client mod are shown below on how to get it if you dont have it already.
 
 ### Vencord
 
-add `https://blade04208.github.io/ddex4/import.css` to your online themes
+1. Enable the "Experiments" plugin in Plugin Settings and reload.
+2. Open **User Settings** and scroll to **Experiments**
+3. Search `2024-05_desktop_visual_refresh`
+4. Click on the result and set the **Bucket Override** to **Treatment 2**.
+5. Download `ddex4.theme.css` and put it in your local themes.
 
-**OR**
-
-download `ddex4.theme.css` and put it in your local themes.
-
+   
 ### BetterDiscord
+
+Currently, there is **No Official Way** to enable discord experiments, just wait for it to be rolled out to you.
+
+If you have it though:
 
 download `ddex4.theme.css` and put it in your themes folder.
 
 ## Support
-[join](https://discord.gg/KEcCnVuTV7)
-
-
+[join server](https://discord.gg/KEcCnVuTV7)
     
-## Todo
+## Issues/To-do
 
-- [X] fix lag dear god
-- [ ] fix buggeth
-- [ ] add actual cut-off-notch support to the server list
-- [ ] 
-just see https://trello.com/b/2dKqp9t6/ddex4-management, submist issues if you find more bugs
+see https://trello.com/b/2dKqp9t6/ddex4-management
 
 ## Contributing
 
