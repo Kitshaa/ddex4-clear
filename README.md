@@ -46,5 +46,5 @@ you can contribute to either fix bugs, make faster, or make it closer-looking to
  - obsidianninja11 for the searchbar-to-icon snippet
  - .voidbbg for the bubble snippet
  - discord for creating this peak of a concept
-
+ - davart154 for their old-chat-bar snippet
 
