@@ -270,6 +270,11 @@ html:not(.visual-refresh).show-redesigned-icons body::before {
   /* makes the panel bigger */
 }
 
+.container_e131a9 {
+  padding: 16px 16px 16px 20px !important;
+  margin: 0 !important;
+}
+
 .avatarWrapper__37e49 {
   gap: 12px !important;
   /* increases the gap between panel pfp and name */
@@ -296,7 +301,7 @@ html:not(.visual-refresh).show-redesigned-icons body::before {
 }
 
 .sidebar_c48ade:has(.voiceButtonsContainer_e131a9) .guilds_c48ade {
-  height: calc(100% - 134px);
+  height: calc(100% - 151px);
 }
 
 a.link__2ea32,
