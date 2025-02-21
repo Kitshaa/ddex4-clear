@@ -62,7 +62,7 @@ html:not(.visual-refresh).show-redesigned-icons body::before {
 .page_c48ade {
   overflow: visible !important;
   box-sizing: content-box;
-  height: calc(100vh - 33px) !important;
+  height: calc(100vh - var(--custom-app-top-bar-height)) !important;
 }
 
 .content_f75fb0>.chatContent_f75fb0,
