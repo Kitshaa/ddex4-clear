@@ -46,7 +46,7 @@ cd ddex4
 npm i
 npm start
 ```
-add `http://localhost:5050/ddex4.theme.css` to your quickcss or theme links and it should work! probably
+add `http://localhost:5050/dev.css` to your quickcss or theme links and it should work! probably
 ## Contributing
 
 you can contribute to either fix bugs, make faster, or make it closer-looking to the original theme
