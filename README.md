@@ -36,6 +36,17 @@ download `ddex4.theme.css` and put it in your themes folder.
 
 see https://trello.com/b/2dKqp9t6/ddex4-management
 
+## Development
+deps: 
+- nodejs
+- npm
+```
+git clone https://github.com/Blade04208/ddex4.git
+cd ddex4
+npm i
+npm start
+```
+add `http://localhost:5050/ddex4.theme.css` to your quickcss or theme links and it should work! probably
 ## Contributing
 
 you can contribute to either fix bugs, make faster, or make it closer-looking to the original theme
