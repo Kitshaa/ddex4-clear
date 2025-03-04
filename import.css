@@ -653,7 +653,7 @@ div[style="height: 12px;"] {
   /* remove as it no longer serves a perpose */
 }
 
-.containerDefault_c69b6d:has(.focusTarget__89030) {
+.containerDefault_c69b6d:not([data-dnd-name]):has(.focusTarget__89030) {
   width: 40px;
   height: 40px;
 
@@ -701,7 +701,7 @@ div[style="height: 12px;"] {
   /* makes banner big and in the bg */
 }
 
-div[style="height: 135px;"] {
+.content__99f8c > div[style^="height:"] {
   display: none;
   /* removes useless element */
 }
@@ -1310,4 +1310,8 @@ div[style="height: 135px;"] {
   }
 
   /* makes message box stick to bottom */
+}
+
+.list_c3cd7d {
+  width: 200%;
 }
