@@ -654,7 +654,7 @@ div[style="height: 12px;"] {
   /* remove as it no longer serves a perpose */
 }
 
-.containerDefault_c69b6d:not([data-dnd-name]):has(.focusTarget__89030) {
+.containerDefault_c69b6d:not([data-dnd-name*=""]):has(.focusTarget__89030) {
   width: 40px;
   height: 40px;
 
@@ -702,9 +702,13 @@ div[style="height: 12px;"] {
   /* makes banner big and in the bg */
 }
 
-.sidebarList_c48ade .content__99f8c > div[style^="height:"] {
+.sidebarList_c48ade .content__99f8c > div[style="height: 130px;"] {
   display: none;
-  /* removes useless element */
+  /* behold, the epilepsynator 
+     changing this element in any way will kill the channel list
+     do not touch it, it is very sensitive
+     thank you
+  */
 }
 
 .bannerImage_f37cb1 {
@@ -1311,8 +1315,4 @@ div[style="height: 12px;"] {
   }
 
   /* makes message box stick to bottom */
-}
-
-.list_c3cd7d {
-  width: 200%;
 }
