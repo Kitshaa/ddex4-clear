@@ -702,7 +702,7 @@ div[style="height: 12px;"] {
   /* makes banner big and in the bg */
 }
 
-.content__99f8c > div[style^="height:"] {
+.sidebarList_c48ade .content__99f8c > div[style^="height:"] {
   display: none;
   /* removes useless element */
 }
