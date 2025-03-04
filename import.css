@@ -654,7 +654,7 @@ div[style="height: 12px;"] {
   /* remove as it no longer serves a perpose */
 }
 
-.containerDefault_c69b6d:not([data-dnd-name*=""]):has(.focusTarget__89030) {
+.containerDefault_c69b6d:not([data-dnd-name]):has(.focusTarget__89030) {
   width: 40px;
   height: 40px;
 
