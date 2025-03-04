@@ -1280,13 +1280,13 @@ div[style="height: 12px;"] {
 /* decoration fix */
 /* profile in bottom left */
 .avatarWrapper__37e49 .avatarDecoration__44b0c {
-  transform: translate(8%, 10%) !important;
+  transform: translate(4px, 4px) !important;
   scale: 1.2 !important;
 }
 
 /* avatar in chat */
 .avatarDecoration_c19a55 {
-  transform: translate(0%, 10%) !important;
+  transform: translate(0px, 1px) !important;
   scale: 1 !important;
 }
 
