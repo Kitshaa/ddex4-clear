@@ -1,0 +1,23 @@
+/* DEV VERSION FOR TESTING */
+
+@import url(./import.css);
+@import url(./src/bubbles.css);
+@import url(./src/profilechanges.css);
+@import url(./src/oneline-chatbox.css);
+
+:root {
+  --show-memberlist-rpc: none;
+  --userbanner-blur: 20px;
+}
+
+.theme-dark {
+  --msgbg: var(--brand-500);
+  --msghv: var(--brand-600);
+  --msgfg: #ffffff;
+}
+
+.theme-light {
+  --msgbg: var(--brand-400);
+  --msghv: var(--brand-500);
+  --msgfg: var(--brand-1000);
+}

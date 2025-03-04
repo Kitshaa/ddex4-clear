@@ -246,8 +246,18 @@ html:not(.visual-refresh).show-redesigned-icons body::before {
     border-radius: 50%;
     width: 32px !important;
     height: 32px !important;
+    overflow: clip;
+
+    foreignObject {
+      mask: none !important;
+    }
 
     .avatarStack__44b0c .avatar__44b0c {
+      width: 32px;
+      height: 32px;
+    }
+
+    .avatarSpeaking__44b0c {
       width: 32px;
       height: 32px;
     }
@@ -368,7 +378,7 @@ a.link__2ea32,
 }
 
 /*cards and member list and more not commented bc i didnt make this */
-div:not(.imageContainer_ef9ae7)>.contentImage__42bf5 {
+div[aria-label="Members"] div:not(.imageContainer_ef9ae7)>.contentImage__42bf5 {
   left: 0px;
   position: absolute;
   z-index: -1;
@@ -1019,7 +1029,7 @@ div[style="height: 135px;"] {
 .contentColumn__23e6b {
   min-width: 0px;
   width: calc(100% - 300px) !important;
-  max-width: calc(100% - 300px)!important;
+  max-width: calc(100% - 300px) !important;
   /* make content wide but dynamic */
 }
 
@@ -1028,8 +1038,8 @@ div[style="height: 135px;"] {
 .mosaicItem__6c706,
 .videoControls_cf09d8,
 .container_cacd02 {
-  direction: ltr!important;
-  text-align: left!important;
+  direction: ltr !important;
+  text-align: left !important;
   /* unfuck bubble code */
 }
 
@@ -1170,6 +1180,7 @@ div[style="height: 135px;"] {
   margin: 10px 10px 10px 0px;
   border-radius: 16px;
 }
+
 /* borken */
 /*.accountProfilePopoutWrapper__37e49 {
 
@@ -1280,7 +1291,7 @@ div[style="height: 135px;"] {
 }
 
 .mask__68edb>mask {
-    display: none;
+  display: none;
 }
 
 .channelBottomBarArea_f75fb0 {
