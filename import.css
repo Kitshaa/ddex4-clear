@@ -1,0 +1,81 @@
+/* CHAT - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.chatContent_f75fb0 {
+  margin: 0 0 16px 16px;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.title_f75fb0 {
+  width: calc(100% - var(--custom-member-list-width) - 16px);
+  margin: 0 0 0 16px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  height: var(--custom-channel-header-height) !important;
+  overflow: hidden;
+}
+
+/* TEXTBOX - - - - - - - - - - - - - - - - - - - - - -   */
+.form_f75fb0 {
+  padding: 0px !important;
+}
+.channelTextArea_f75fb0 {
+  --custom-chat-input-margin-bottom: 2px;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0px;
+  border-top: 1px solid var(--border-subtle)!important;
+}
+.scrollableContainer__74017 {
+  background: transparent !important;
+  border-radius: 0px;
+}
+
+/* MEMBERS - - - - - - - - - - - - - - - - - - - - - - - */
+.membersWrap_c8ffbb {
+  top: calc(0px - var(--custom-channel-header-height));
+  height: calc(100% + var(--custom-channel-header-height)) !important;
+  max-height: calc(100% + var(--custom-channel-header-height)) !important;
+}
+
+.container_c8ffbb,
+.members_c8ffbb,
+.member__5d473,
+.chat_f75fb0 {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* CHANNELS - - - - - - - - - - - - - - - - - - - - - - */
+.sidebarList_c48ade,
+.sidebar_c48ade,
+.container__2637a {
+  overflow: visible !important;
+  z-index: 2 !important;
+
+  .scroller__629e4 {
+    width: calc(100% + 24px);
+  }
+}
+
+.link__2ea32 {
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
+}
+
+/* USERPANEL - - - - - - - - - - - - - - - - - - - - - */
+.panels_c48ade {
+  background-color: var(--background-base-lowest) !important;
+  left: 0px !important;
+  bottom: 0px !important;
+  width: calc(100% + 16px) !important;
+  border: none !important;
+  border-radius: 0px !important;
+  border-top: 1px solid var(--border-subtle) !important;
+}
+
+.container__37e49 {
+  padding: var(--space-sm) var(--space-md) !important;
+}
+
+/* GUILDS - - - - - - - - - - - - - - - - - - - - - - */
+.guilds_c48ade {
+  z-index: 3 !important;
+}
