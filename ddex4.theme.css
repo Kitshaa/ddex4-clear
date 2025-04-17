@@ -3,7 +3,7 @@
  * @description Discord's scrapped Design Experiment V4, made real.
  * @author Blade0
  * @authorId 1124341362955919371
- * @version 1.3
+ * @version 3
  * @updateUrl https://blade04208.github.io/ddex4/ddex4.theme.css
  * @source https://github.com/Blade04208/ddex4
  * @invite KEcCnVuTV7
@@ -11,23 +11,5 @@
  
 @import url(https://blade04208.github.io/ddex4/import.css);
 @import url(https://blade04208.github.io/ddex4/src/bubbles.css);
-@import url(https://blade04208.github.io/ddex4/src/profilechanges.css);
-@import url(https://blade04208.github.io/ddex4/src/oneline-chatbox.css);
-:root {
-  /*  DDEX4 has background support! just uncomment and change the below
-      URL to any color **OR** tiling image and it will be applied to the background  */
-  /* --bg-base-tertiary: url(https://1-background.com/images/stars-1/stars-background-purple.jpg) !important; */
 
-   --show-memberlist-rpc: none;          /* set "none" to "block" to show status in the memberlist */
-   --userbanner-blur: 20px;              /* set to 0 to remove blur on banners */
-}
-.theme-dark {
-  --msgbg: var(--brand-500);             /* BG for own messages,         dark mode */
-  --msghv: var(--brand-600);             /* hover BG for own messages,   dark mode */
-  --msgfg: #ffffff;                      /* text color for own messages, dark mode */
-}
-.theme-light {
-  --msgbg: var(--brand-400);             /* BG for own messages,         light mode */
-  --msghv: var(--brand-500);             /* hover BG for own messages,   light mode */
-  --msgfg: var(--brand-1000);            /* text color for own messages, light mode */
-}
+/* no custom vars (yet) */
