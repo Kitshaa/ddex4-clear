@@ -634,8 +634,13 @@ section.panels_c48ade {
 /* └ PILLDOT -  -  -  -  -  -  -  -  -  -  -  -  -  - */
 .pill_e5445c:not(:has(.item__58105[style*="height: 40px;"])),
 .pill_c9fddf:not(:has(.item__58105[style*="height: 40px;"])) {
+  overflow: visible;
+  width: 100%;
+  z-index: 3;
+  pointer-events: none;
+  > span {
   width: 8px;
-  height: 8px;
+  height: 8px!important;
   right: 15px !important;
   bottom: -2px !important;
   top: auto !important;
@@ -645,6 +650,7 @@ section.panels_c48ade {
   border: 4px solid var(--bg-base-tertiary);
   z-index: 3;
   pointer-events: none;
+  }
 }
 
 .pill_e5445c:has(.item__58105[style*="height: 40px;"]),

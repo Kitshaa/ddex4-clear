@@ -10,22 +10,12 @@ Discord's scrapped Design Experiment V4, made real.
 
 ## Installation
 
-DDEX4 is designed for Discord's Visual Refresh! Instructions for eact client mod are shown below on how to get it if you dont have it already.
-
 ### Vencord
 
-1. Enable the "Experiments" plugin in Plugin Settings and reload.
-2. Open **User Settings** and scroll to **Experiments**
-3. Search `2024-05_desktop_visual_refresh`
-4. Click on the result and set the **Bucket Override** to **Treatment 2**.
-5. Download `ddex4.theme.css` and put it in your local themes.
+Download `ddex4.theme.css` and put it in your local themes.
 
    
 ### BetterDiscord
-
-Currently, there is **No Official Way** to enable discord experiments, just wait for it to be rolled out to you.
-
-If you have it though:
 
 download `ddex4.theme.css` and put it in your themes folder.
 
