@@ -1,20 +1,23 @@
 /* MESSAGES  - - - - - - - - - - - - - - - - - - - - - */
 .contents_c19a55>.messageContent_c19a55 {
     background-color: rgba(255, 255, 255, 0.075);
-    width: max-content;
+    width: fit-content;
     margin-left: 0px !important;
     padding-left: 0px !important;
     padding: 14px !important;
     border-radius: 0px 10px 10px 0px;
-    max-width: calc(100vw - var(--custom-guild-sidebar-width) - var(--custom-member-list-width) - var(--custom-message-margin-left-content-cozy) * 2.25);
+    box-sizing: content-box;
+    max-width: 100%;
+    word-wrap:normal;
   }
   
   .groupStart__5126c .messageContent_c19a55 {
     border-radius: 10px 10px 10px 0px;
   }
-  
-  .contents_c19a55 {
-    width: max-content;
+  .message__5126c, .contents_c19a55 {
+    /* position: absolute; */
+    max-width: calc(100% - var(--custom-message-margin-left-content-cozy))!important;
+    min-width: calc(100% - var(--custom-message-margin-left-content-cozy))!important;
   }
   
   
@@ -31,6 +34,7 @@
     /* flex-direction: row; */
     /* flex-wrap: wrap!important; */
     align-content: flex-end;
+    justify-content: flex-end;
   
     >div {
       position: relative;
@@ -140,7 +144,7 @@
     justify-items: end;
   
     .message__5126c {
-      padding-left: 100%;
+      /* padding-left: 100%; */
       padding-right: var(--custom-message-margin-left-content-cozy) !important;
   
       .contents_c19a55 {
@@ -212,7 +216,7 @@
   
       .container__040f0 {
         right: auto;
-        left: -24px;
+        left: 24px;
       }
     }
   
