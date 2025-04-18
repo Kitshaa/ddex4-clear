@@ -6,7 +6,7 @@
     padding-left: 0px !important;
     padding: 14px !important;
     border-radius: 0px 10px 10px 0px;
-    max-width: calc(100%)!important;
+    max-width: calc(100vw - var(--custom-guild-sidebar-width) - var(--custom-member-list-width) - var(--custom-message-margin-left-content-cozy) * 2.25);
   }
   
   .groupStart__5126c .messageContent_c19a55 {
@@ -14,7 +14,7 @@
   }
   
   .contents_c19a55 {
-    width: 100%;
+    width: max-content;
   }
   
   
