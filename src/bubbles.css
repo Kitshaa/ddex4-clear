@@ -20,19 +20,14 @@
     min-width: calc(100% - var(--custom-message-margin-left-content-cozy))!important;
   }
   
-  
+  /*
   .reactions__23977 {
     margin-bottom: -12px;
   
-    /* order: -1 !important; */
-    /* position: absolute; */
     width: 100% !important;
-    /* height: 50%; */
-    /* justify-content: space-between !important; */
+
     bottom: -16px;
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* flex-wrap: wrap!important; */
+
   
     >div {
       position: relative;
@@ -129,7 +124,7 @@
       }
     }
   }
-  
+  */
   .reactionInner__23977[aria-label*=", 1 "] .reactionCount__23977 {
     display: none !important;
   }
