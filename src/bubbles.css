@@ -182,7 +182,7 @@
   
       .repliedMessage_c19a55 {
         position: absolute;
-        direction: rtl;
+        flex-direction: row-reverse;
         top: 0px;
         left: auto !important;
         right: calc(var(--custom-message-margin-horizontal) - var(--custom-message-avatar-decoration-size) / 2 + var(--custom-message-avatar-size) / 2);
