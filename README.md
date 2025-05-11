@@ -1,3 +1,6 @@
+# This is my personal theme. Code is bad, it's not meant for public use. It may not work on your client.
+
+### Original README:
 
 # ddex4
 
