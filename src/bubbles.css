@@ -26,6 +26,13 @@
     right: 20px;
 }
 
+/* More ddex4-like timestamps */
+.header_c19a55 {
+  margin-left: 10px;
+  margin-bottom: 4px;
+  margin-right: 10px;
+}
+
 /*
   .reactions__23977 {
     margin-bottom: -12px;
@@ -135,6 +142,16 @@
     display: none !important;
 }
 
+/* bring pfp to bottom of messages */
+.avatar_c19a55,
+.avatarDecoration_c19a55 {
+  bottom: 8px;
+}
+
+.messageSpine_c19a55:before,
+.repliedMessageClickableSpine_c19a55 {
+  bottom: -14px;
+}
 
 .messageListItem__5126c[data-is-self="true"] {
     align-items: end;
@@ -188,7 +205,7 @@
 
         .repliedMessage_c19a55 {
             position: absolute;
-            flex-direction: row-reverse;
+            flex-direction: row;
             top: 0px;
             left: auto !important;
             right: calc(var(--custom-message-margin-horizontal) - var(--custom-message-avatar-decoration-size) / 2 + var(--custom-message-avatar-size) / 2);
@@ -199,6 +216,7 @@
         .repliedMessageClickableSpine_c19a55 {
             right: calc(var(--chat-avatar-size) / 2 * -1 + var(--gutter) * -1 - 4px);
             left: 100%;
+            bottom: -14px;
             border-right: var(--spine-width) solid var(--spine-default);
             border-bottom: 0 solid var(--spine-default);
             border-left: 0 solid var(--spine-default);
@@ -206,6 +224,21 @@
             border-top: var(--spine-width) solid var(--spine-default);
             border-top-right-radius: 6px;
             border-top-left-radius: 0px;
+        }
+
+        /* For some reason the class above doesn't apply for me, so this exists */
+        .messageSpine_c19a55:before {
+            right: calc(var(--chat-avatar-size) / 2 * -1 + var(--gutter) * -1 - 18px);
+            left: 100%;
+            bottom: -14px;
+            border-right: var(--spine-width) solid var(--spine-default);
+            border-bottom: 0 solid var(--spine-default);
+            border-left: 0 solid var(--spine-default);
+            border-top: 2px solid var(--spine-default);
+            border-top: var(--spine-width) solid var(--spine-default);
+            border-top-right-radius: 6px;
+            border-top-left-radius: 0px;
+            margin-left: 4px;
         }
     }
 
@@ -224,4 +257,8 @@
         justify-content: flex-end;
     }
 
+}
+
+.vc-reply-timestamp {
+  margin: 0;
 }
