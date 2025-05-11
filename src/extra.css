@@ -1,0 +1,77 @@
+/* Spotify controls (original snippet by @fripe: https://discord.com/channels/1015060230222131221/1028106818368589824/1367926149497225287) */
+#vc-spotify-player {
+  --blur-amount: 4px; 
+  --normal-bg-colour: var(--bg-overlay-floating, var(--background-base-low, var(--background-secondary-alt)));
+
+  border-top: 1px solid var(--border-subtle);
+  position: relative;
+  background: transparent !important;
+  transition: all 0.4s ease-out;
+  > * {
+    filter: drop-shadow(0 0 10px var(--normal-bg-colour));
+  }
+}
+.panels_c48ade:hover #vc-spotify-player {
+  --blur-amount: 0px;
+}
+#vc-spotify-player::before,
+#vc-spotify-player::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  height: 240%; /* :3 */
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: all 0.4s ease-out;
+}
+#vc-spotify-player::before {
+  background: var(--vc-spotify-track-image);
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, 0) 100%);
+  background-position: center bottom; 
+  background-size: cover; 
+  opacity: 0.5;
+}
+.panels_c48ade:hover #vc-spotify-player::before {
+  opacity: 0.7;
+}
+#vc-spotify-player::after {
+  backdrop-filter: blur(var(--blur-amount));
+}
+#vc-spotify-progress-bar > [class^="slider_"] > [class^="bar_"] > [class^="barFill_"] {
+  background-color: white !important;
+  background: var(--vc-spotify-track-image);
+  background-size: 1px 100%;
+}
+#vc-spotify-progress-bar > [class^="slider_"] > [class^="bar_"] > [class^="barFill_"]::before {
+  content: "";
+  position: fixed;
+  height: inherit;
+  width: inherit;
+  top: inherit;
+  left: inherit;
+  border-radius: 4px 0 0 4px;
+  backdrop-filter: blur(10px) saturate(4) brightness(1.6);
+}
+.theme-dark .vc-spotify-lyrics {
+background: var(--vc-spotify-track-image);
+}
+#vc-spotify-player[style="--vc-spotify-track-image: url();"]::before {
+background: url(https://files.nexus-twm.es/api/public/dl/4TVO6Fno/personal/images/covers/F5UaVJLXoAAjJwf.jpg) !important;
+background-size: cover !important;
+background-position: center !important;
+}
+
+.vc-spotify-button-row {
+  position: relative;
+  height: 0;
+  top: -84px;
+  left: 80px;
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+  /* Legalize nuclear bombs */
+}
+
+.vc-spotify-button-row:hover {
+  opacity: 1;
+}
