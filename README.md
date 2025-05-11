@@ -1,4 +1,7 @@
-# This is my personal theme. Code is bad, it's not meant for public use. It may not work on your client.
+# This is my personal theme. Code is bad, it's not really meant for public use. It may not work on your client.
+Check the `ddex4.theme.css` file for fun things.
+
+![thumbnail ig](/src/thumb2.png)
 
 ### Original README:
 
