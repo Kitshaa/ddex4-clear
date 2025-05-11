@@ -75,6 +75,10 @@ section.panels_c48ade,
   box-shadow: 0px 32px 60px 12px rgba(0, 0, 0, 0.75);
 }
 
+.theme-dark .children__9293f:after {
+  background: rgba(0, 0, 0, 0);
+}
+
 .theme-dark .themed__9293f {
   background-color: rgba(20, 20, 20, 0.1);
   backdrop-filter: blur(8px);
