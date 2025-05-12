@@ -991,7 +991,6 @@ section.panels_c48ade {
 /* Right click menu */
 .menu_c1e9c4 {
   background-color: rgba(20, 20, 20, 0.8);
-  backdrop-filter: blur(20px) !important;
 }
 
 /* Call background */
