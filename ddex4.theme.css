@@ -3,47 +3,48 @@
  * @description Discord's scrapped Design Experiment V4, now in a translucid design!
  * @author Kitsha, Blade0
  * @authorId 490454882172534785, 1124341362955919371
- * @version 3
+ * @version 3.1
  * @updateUrl https://kitshaa.github.io/ddex4-clear/ddex4.theme.css
  * @source https://github.com/Kitshaa/ddex4-clear
  * @invite KEcCnVuTV7
  */
 
-@import url(https://kitshaa.github.io/ddex4-clear/import.css);
-@import url(https://kitshaa.github.io/ddex4-clear/src/bubbles.css);
+ @import url(https://kitshaa.github.io/ddex4-clear/import.css);
+ @import url(https://kitshaa.github.io/ddex4-clear/src/bubbles.css);
+ 
+ /* Comment this line to remove some extra plugin theming */
+ @import url(https://kitshaa.github.io/ddex4-clear/src/extra.css);
+ 
+ :root {
+   --brand-460: rgba(29, 29, 29, 0.6);
+   --brand-500: rgba(39, 39, 39, 0.6);
+   --brand-600: rgba(29, 29, 29, 0.6);
+ 
+   /* I stole this and the bg code from Clearvision :3 */
+   --background-image: url(https://kitshaa.github.io/ddex4-clear/src/bg.jpg);
+   --background-shading: rgba(0, 0, 0, 0.2);
+   /* change this furry shit!1!! */
+   --home-icon: url(https://kitshaa.github.io/ddex4-clear/src/home.png);
+   --home-size: 24px;
+ }
 
-/* Comment this line to remove some extra plugin theming */
-@import url(https://kitshaa.github.io/ddex4-clear/src/extra.css);
-
-:root {
-  --brand-460: rgba(29, 29, 29, 0.6);
-  --brand-500: rgba(39, 39, 39, 0.6);
-  --brand-600: rgba(29, 29, 29, 0.6);
-
-  /* I stole this and the bg code from Clearvision :3 */
-  --background-image: url(https://kitshaa.github.io/ddex4-clear/src/bg.jpg);
-  /* change this furry shit!1!! */
-  --home-icon: url(https://kitshaa.github.io/ddex4-clear/src/home.png);
-  --home-size: 24px;
-}
-
-/* Gradient messages (by @jim.jams) */
-.messageListItem__5126c[data-is-self="true"] {
-  .contents_c19a55>.messageContent_c19a55:not(:empty) {
-    background-attachment: fixed !important;
-    &, &:hover {
-      background-image: linear-gradient(192deg, rgba(82, 82, 82, 0.6), rgba(5, 5, 5, 0.6)) !important
-    }
-  }
-}
-
-/* Custom server banners/bgs */
-/* Want to add your own? Copy and paste this example and change SERVER_NAME with the name of the server */
-/* and IMAGE_LINK with the url of the image you want as banner/bg! */
-
-/*
-
-.content_c48ade:has(.headerButton_f37cb1[aria-label="SERVER_NAME, server actions"])::before {
+ /* Gradient messages (by @jim.jams) */
+ .messageListItem__5126c[data-is-self="true"] {
+   .contents_c19a55>.messageContent_c19a55:not(:empty) {
+     background-attachment: fixed !important;
+     &, &:hover {
+       background-image: linear-gradient(192deg, rgba(82, 82, 82, 0.6), rgba(5, 5, 5, 0.6)) !important
+     }
+   }
+ }
+ 
+ /* Custom server banners/bgs */
+ /* Want to add your own? Copy and paste this example and change SERVER_NAME with the name of the server */
+ /* and IMAGE_LINK with the url of the image you want as banner/bg! */
+ 
+ /*
+ 
+.content_c48ade:has(.container__2637a[aria-label="SERVER_NAME, (server)"])::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -54,6 +55,5 @@
 
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, 0) 100%);
 }
-
-*/
-
+ 
+ */

@@ -4,7 +4,7 @@
 
 .visual-refresh .appMount__51fd7 .layers__960e4,
 .appMount__51fd7 .layer__960e4 {
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--background-shading);
 }
 
 .container_c8ffbb,
