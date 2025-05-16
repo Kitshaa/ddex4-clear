@@ -458,15 +458,7 @@ section.panels_c48ade,
 }
 
 /* └ DMS -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  */
-.outer_c0bea0.panel_c0bea0 {
-  top: calc(0px - var(--custom-channel-header-height) - 6px);
-  margin-left: 8px !important;
-  border-radius: var(--radius-lg) !important;
-  overflow: hidden;
-  height: calc(100% + var(--custom-channel-header-height) - 16px) !important;
-}
-
-.outer_c0bea0 {
+.user-profile-sidebar {
   border-radius: var(--radius-lg);
   margin-bottom: 32px;
   margin-left: 8px;
@@ -474,8 +466,17 @@ section.panels_c48ade,
   height: calc(100% + var(--custom-channel-header-height) - 32px + 6px);
 }
 
-.outer_c0bea0 .inner_c0bea0 {
+.user-profile-sidebar .inner_c0bea0 {
   border-radius: var(--radius-lg);
+}
+
+.user-profile-sidebar:not(.custom-theme-background) {
+  background: rgba(0, 0, 0, 0);
+}
+
+.user-profile-sidebar:not(.custom-theme-background) .inner_c0bea0 {
+  background-color: rgba(20, 20, 20, 0.5);
+  backdrop-filter: blur(20px);
 }
 
 /* Friends tab */
@@ -1006,13 +1007,18 @@ section.panels_c48ade {
 }
 
 /* Popout profile */
-.outer_c0bea0:not(.custom-user-profile-theme, .container__5a2c6) {
+.user-profile-popout, .user-profile-popout .inner_c0bea0 {
+  border-radius: var(--radius-lg);
+}
+
+.user-profile-popout:not(.custom-theme-background) {
   background: rgba(0, 0, 0, 0);
 }
 
-.outer_c0bea0:not(.custom-user-profile-theme, .container__5a2c6) .inner_c0bea0 {
+.user-profile-popout:not(.custom-theme-background) .inner_c0bea0, .root__49fc1 {
   background-color: rgba(20, 20, 20, 0.5);
   backdrop-filter: blur(20px);
+  border-radius: var(--radius-lg);
 }
 
 .userPopoutOuter_c69a7b [style*=background-image].banner__68edb {
@@ -1028,6 +1034,10 @@ section.panels_c48ade {
 .overlay_c0bea0 {
   background: rgba(90, 90, 90, 0.2);
   transition-duration: .2s;
+}
+
+.user-profile-modal-v2 {
+  background: rgba(0, 0, 0, 0);
 }
 
 /* Focus lock (Confirm links) */
