@@ -682,7 +682,8 @@ section.panels_c48ade {
   border-top: 1px solid var(--border-subtle);
 }
 
-.whosWatching-spectators_panel {
+.whosWatching-spectators_panel, .listeningAlong_e0cf27  {
+  background-color: rgba(0, 0, 0, 0);
   margin: 0 !important;
   padding: 0px 16px 0px 20px;
 }
@@ -691,8 +692,8 @@ section.panels_c48ade {
   padding: 8px 16px 8px 20px;
 }
 
-/* Stream activity panel and listening along */
-.visual-refresh .panel__5dec7, .listeningAlong_e0cf27 {
+/* Stream activity panel*/
+.visual-refresh .panel__5dec7 {
   background-color: rgba(0,0,0,0);
 }
 
