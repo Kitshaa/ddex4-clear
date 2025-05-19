@@ -691,9 +691,9 @@ section.panels_c48ade {
   padding: 8px 16px 8px 20px;
 }
 
-/* Stream activity panel */
-.visual-refresh .panel__5dec7 {
-  background-color: rgba(20, 20, 20, 0.8);
+/* Stream activity panel and listening along */
+.visual-refresh .panel__5dec7, .listeningAlong_e0cf27 {
+  background-color: rgba(0,0,0,0);
 }
 
 /* GUILDS - - - - - - - - - - - - - - - - - - - - - - */
