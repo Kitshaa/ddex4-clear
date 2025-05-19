@@ -682,7 +682,7 @@ section.panels_c48ade {
   border-top: 1px solid var(--border-subtle);
 }
 
-.whosWatching-spectators_panel, .listeningAlong_e0cf27  {
+.whosWatching-spectators_panel {
   background-color: rgba(0, 0, 0, 0);
   margin: 0 !important;
   padding: 0px 16px 0px 20px;
@@ -695,6 +695,12 @@ section.panels_c48ade {
 /* Stream activity panel*/
 .visual-refresh .panel__5dec7 {
   background-color: rgba(0,0,0,0);
+}
+
+/* Listening along */
+.listeningAlong_e0cf27 {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 8px 16px 8px 20px;
 }
 
 /* GUILDS - - - - - - - - - - - - - - - - - - - - - - */
