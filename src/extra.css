@@ -19,7 +19,7 @@
   z-index: -1;
   content: "";
   position: absolute;
-  height: 240%; /* :3 */
+  height: 245%; /* :3 */
   width: 100%;
   top: 0;
   left: 0;
@@ -74,4 +74,43 @@ background-position: center !important;
 
 .vc-spotify-button-row:hover {
   opacity: 1;
+}
+
+/* Settings modal */
+.sidebarRegionScroller__23e6b, .contentRegion__23e6b, .contentRegionScroller__23e6b {
+ background: rgba(0,0,0,0) !important;
+}
+
+@keyframes blurFadeIn {
+  0% {
+    backdrop-filter: blur(0px);
+  }
+  100% {
+    backdrop-filter: blur(20px);
+  }
+}
+
+.visual-refresh .standardSidebarView__23e6b{
+  background: rgba(0,0,0,0.3);
+  opacity: 1 !important;
+  transform: none !important;
+  width: 60vw;
+  left: 20vw;
+  height: 90vh;
+  top: 5vh;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  animation: blurFadeIn 0.5s ease-out forwards;
+  animation-delay: 0.5s;
+
+  .contentRegion__23e6b {
+    width: calc(60vw - 270px);
+    display: block;
+    flex: none;
+  }
+}
+
+.baseLayer__960e4 {
+  opacity: 1 !important;
+  transform: unset !important;
 }
