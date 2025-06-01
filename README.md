@@ -20,7 +20,8 @@ Download `ddex4.theme.css` and put it in your local themes.
 download `ddex4.theme.css` and put it in your themes folder.
 
 ## Support
-[join server](https://discord.gg/KEcCnVuTV7)
+<a href="https://discord.gg/KEcCnVuTV7"><img alt="discord-singular" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/social/discord-singular_vector.svg"></a>
+
     
 ## Issues/To-do
 
@@ -43,9 +44,7 @@ you can contribute to either fix bugs, make faster, or make it closer-looking to
 
 
 ## Acknowledgements
-
  - obsidianninja11 for the searchbar-to-icon snippet
- - .voidbbg for the bubble snippet
+ - ThaUnknown_ for teaching me that css is laggy, and giving the dev-boilerplate
  - discord for creating this peak of a concept
- - davart154 for their old-chat-bar snippet
 
