@@ -341,7 +341,7 @@ section.panels_c48ade,
   background: rgba(90, 90, 90, 0.1);
 }
 
-.container_faa96b.isOpen_faa96b {
+.container_faa96b.isOpen_faa96b, .container_faa96b:hover {
   background: rgba(90, 90, 90, 0.5);
 }
 
