@@ -17,6 +17,7 @@
 .scroller__99e7c,
 section.panels_c48ade,
 .container__37e49,
+.container_f369db,
 .video_cb9592 {
   background: transparent !important;
   background-color: transparent !important;
@@ -334,6 +335,16 @@ section.panels_c48ade,
     }
   }
 }
+
+/* Forums */
+.mainCard_f369db {
+  background: rgba(90, 90, 90, 0.1);
+}
+
+.container_faa96b.isOpen_faa96b {
+  background: rgba(90, 90, 90, 0.5);
+}
+
 
 /* TEXTBOX - - - - - - - - - - - - - - - - - - - - - -   */
 .form_f75fb0 {
