@@ -26,6 +26,9 @@
    /* change this furry shit!1!! */
    --home-icon: url(https://kitshaa.github.io/ddex4-clear/src/home.png);
    --home-size: 24px;
+
+   /* If you have the ChannelTabs plugin (from Equicord) set to 'true' or 'bookmarks' */
+   --channel-tabs: false;
  }
 
  /* Gradient messages (by @jim.jams) */

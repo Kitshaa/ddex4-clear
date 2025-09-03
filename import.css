@@ -1,3 +1,27 @@
+@property --channel-tabs {
+  syntax: "false | true | bookmarks";
+  inherits: true;
+  initial-value: false;
+}
+
+@container style(--channel-tabs: false) {
+  .page_c48ade {
+    max-height: calc(100vh - var(--custom-app-top-bar-height)) !important;
+  }
+}
+
+@container style(--channel-tabs: true) {
+  .page_c48ade {
+    max-height: calc(100vh - var(--custom-app-top-bar-height) - 44px) !important;
+  }
+}
+
+@container style(--channel-tabs: bookmarks) {
+  .page_c48ade {
+    max-height: calc(100vh - var(--custom-app-top-bar-height) - 83px) !important;
+  }
+}
+
 .visual-refresh .bg__960e4 {
   background: var(--background-image) center /cover no-repeat fixed !important;
 }
@@ -116,10 +140,6 @@ section.panels_c48ade,
 
 .chat_f75fb0 {
   overflow: visible !important;
-}
-
-.page_c48ade {
-  max-height: calc(100vh - var(--custom-app-top-bar-height)) !important;
 }
 
 .iconWrapper__9293f:has([d="M14.5 8a3 3 0 1 0-2.7-4.3c-.2.4.06.86.44 1.12a5 5 0 0 1 2.14 3.08c.01.06.06.1.12.1ZM18.44 17.27c.15.43.54.73 1 .73h1.06c.83 0 1.5-.67 1.5-1.5a7.5 7.5 0 0 0-6.5-7.43c-.55-.08-.99.38-1.1.92-.06.3-.15.6-.26.87-.23.58-.05 1.3.47 1.63a9.53 9.53 0 0 1 3.83 4.78ZM12.5 9a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM2 20.5a7.5 7.5 0 0 1 15 0c0 .83-.67 1.5-1.5 1.5a.2.2 0 0 1-.2-.16c-.2-.96-.56-1.87-.88-2.54-.1-.23-.42-.15-.42.1v2.1a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2.1c0-.25-.31-.33-.42-.1-.32.67-.67 1.58-.88 2.54a.2.2 0 0 1-.2.16A1.5 1.5 0 0 1 2 20.5Z"]) {
@@ -998,6 +1018,27 @@ section.panels_c48ade {
     gap: 0px !important;
     padding-right: 4px;
   }
+}
+
+/* CustomTabs */
+.vc-channeltabs-container-top {
+  background-color: rgba(20, 20, 20, 0.5);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: none !important;
+}
+
+.vc-channeltabs-tab, .vc-channeltabs-new-button {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.vc-channeltabs-tab-selected {
+  background-color: rgba(90, 90, 90, 0.3);
+}
+
+.vc-channeltabs-new-button {
+  display: flex;
+  align-items: center;
 }
 
 /* SHOP - - - - - - - - - - - - - - - - - - - - - */
