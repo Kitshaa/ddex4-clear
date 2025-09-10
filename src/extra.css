@@ -107,6 +107,9 @@ background-position: center !important;
     width: calc(60vw - 270px);
     display: block;
     flex: none;
+    .contentRegionScroller__23e6b {
+      height: calc(90vh - 3vh);
+    }
   }
 }
 

@@ -369,6 +369,28 @@ section.panels_c48ade,
 /* TEXTBOX - - - - - - - - - - - - - - - - - - - - - -   */
 .form_f75fb0 {
   padding: 0px !important;
+  margin-top: 0 !important;
+  position: static !important;
+}
+
+.chatGradientBase__36d07 {
+  display: none;
+}
+
+.scrollerSpacer__36d07 {
+  height: 16px !important;
+}
+
+.typing_b88801 {
+  top: calc(100% - 3vh) !important;
+}
+
+.inTextChannel_b88801 .typingDots_b88801{
+  margin-left: 0 !important;
+}
+
+.inTextChannel_b88801 .text_b88801 {
+  margin-left: 4px !important;
 }
 
 .channelTextArea_f75fb0 {
@@ -395,8 +417,13 @@ section.panels_c48ade,
   border-top: 1px solid var(--border-subtle) !important;
 }
 
+.attachWrapper__0923f {
+  display: flex;
+  align-items: center;
+}
+
 .attachButton__0923f {
-  padding-left: 20px !important;
+  padding: 0 !important;
 }
 
 .buttons__74017 {
@@ -856,14 +883,17 @@ section.panels_c48ade {
   border-top: 1px solid var(--border-subtle);
 }
 
+.connection_e131a9 {
+  height: 100% !important;
+}
+
 .whosWatching-spectators_panel {
   background-color: rgba(0, 0, 0, 0);
   margin: 0 !important;
-  padding: 0px 16px 0px 20px;
 }
 
 .panel__5dec7 {
-  padding: 8px 16px 8px 20px;
+  padding: 8px 16px 8px 20px !important;
 }
 
 /* Stream activity panel*/
