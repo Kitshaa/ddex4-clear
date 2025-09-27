@@ -18,8 +18,8 @@
 .message__5126c,
 .contents_c19a55 {
     /* position: absolute; */
-    max-width: calc(100% - var(--custom-message-margin-left-content-cozy)) !important;
-    min-width: calc(100% - var(--custom-message-margin-left-content-cozy)) !important;
+    max-width: 95% !important;
+    min-width: 95% !important;
 }
 
 .buttonContainer_c19a55 .container__040f0 {

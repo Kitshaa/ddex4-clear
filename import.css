@@ -1,3 +1,9 @@
+:root {
+  --custom-app-height: calc(100vh - var(--custom-app-top-bar-height));
+  --custom-app-height-with-tabs: calc(var(--custom-app-height) - 44px);
+  --custom-app-height-with-bookmarks: calc(var(--custom-app-height) - 83px);
+}
+
 @property --channel-tabs {
   syntax: "false | true | bookmarks";
   inherits: true;
@@ -6,24 +12,31 @@
 
 @container style(--channel-tabs: false) {
   .page_c48ade {
-    max-height: calc(100vh - var(--custom-app-top-bar-height)) !important;
+    max-height: var(--custom-app-height) !important;
   }
 }
 
 @container style(--channel-tabs: true) {
   .page_c48ade {
-    max-height: calc(100vh - var(--custom-app-top-bar-height) - 44px) !important;
+    max-height: var(--custom-app-height-with-tabs) !important;
   }
 }
 
 @container style(--channel-tabs: bookmarks) {
   .page_c48ade {
-    max-height: calc(100vh - var(--custom-app-top-bar-height) - 83px) !important;
+    max-height: var(--custom-app-height-with-bookmarks) !important;
   }
 }
 
 .visual-refresh .bg__960e4 {
-  background: var(--background-image) center /cover no-repeat fixed !important;
+  background: var(--background-image) center / cover no-repeat !important;
+  /* removed 'fixed' property */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
 }
 
 .visual-refresh .appMount__51fd7 .layers__960e4,
@@ -420,6 +433,7 @@ section.panels_c48ade,
 .attachWrapper__0923f {
   display: flex;
   align-items: center;
+  padding-left: 16px;
 }
 
 .attachButton__0923f {
