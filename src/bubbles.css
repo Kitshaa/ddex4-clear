@@ -1,29 +1,29 @@
 /* MESSAGES  - - - - - - - - - - - - - - - - - - - - - */
 .contents_c19a55>.messageContent_c19a55 {
-    background-color: rgba(255, 255, 255, 0.075);
-    width: fit-content;
-    margin-left: 0px !important;
-    padding-left: 0px !important;
-    padding: 14px !important;
-    border-radius: 0px 10px 10px 0px;
-    box-sizing: content-box;
-    max-width: 100%;
-    word-wrap: normal;
+  background-color: rgba(255, 255, 255, 0.075);
+  width: fit-content;
+  margin-left: 0px !important;
+  padding-left: 0px !important;
+  padding: 14px !important;
+  border-radius: 0px 10px 10px 0px;
+  box-sizing: content-box;
+  max-width: 100%;
+  word-wrap: normal;
 }
 
 .groupStart__5126c .messageContent_c19a55 {
-    border-radius: 10px 10px 10px 0px;
+  border-radius: 10px 10px 10px 0px;
 }
 
 .message__5126c,
 .contents_c19a55 {
-    /* position: absolute; */
-    max-width: 95% !important;
-    min-width: 95% !important;
+  /* position: absolute; */
+  max-width: 95% !important;
+  min-width: 95% !important;
 }
 
 .buttonContainer_c19a55 .container__040f0 {
-    right: 20px;
+  right: 20px;
 }
 
 /* More ddex4-like timestamps */
@@ -139,7 +139,7 @@
   }
   */
 .reactionInner__23977[aria-label*=", 1 "] .reactionCount__23977 {
-    display: none !important;
+  display: none !important;
 }
 
 /* bring pfp to bottom of messages */
@@ -154,113 +154,126 @@
 }
 
 .messageListItem__5126c[data-is-self="true"] {
-    align-items: end;
-    align-content: end;
-    justify-content: end;
-    justify-items: end;
+  align-items: end;
+  align-content: end;
+  justify-content: end;
+  justify-items: end;
 
-    .message__5126c {
-        /* padding-left: 100%; */
-        padding-right: var(--custom-message-margin-left-content-cozy) !important;
+  .message__5126c {
+    /* padding-left: 100%; */
+    padding-right: var(--custom-message-margin-left-content-cozy) !important;
 
-        .contents_c19a55 {
-            justify-items: end;
-        }
-
-        .avatar_c19a55 {
-            left: auto !important;
-            right: var(--custom-message-margin-horizontal);
-        }
-
-        .avatarDecoration_c19a55 {
-            left: auto !important;
-            right: calc(var(--custom-message-margin-horizontal) - var(--custom-message-avatar-decoration-size) / 2 + var(--custom-message-avatar-size) / 2);
-        }
-
-        .contents_c19a55>.messageContent_c19a55 {
-            border-radius: 10px 0px 0px 10px;
-            background-color: var(--brand-500);
-        }
-
-        &.groupStart__5126c .messageContent_c19a55 {
-            border-radius: 10px 10px 0px 10px;
-        }
-
-        .container_b7e1cb>* {
-            justify-self: end !important;
-            align-self: end !important;
-        }
-
-        .container__8e577 {
-            justify-self: end;
-        }
-        
-        .visualMediaItemContainer_f4758a {
-            width: auto;
-        }
-
-        .contents_c19a55 {
-            justify-self: end;
-        }
-
-        &.hasReply_c19a55 {
-            padding-top: 22px;
-        }
-
-        .repliedMessage_c19a55 {
-            position: absolute;
-            flex-direction: row;
-            top: 0px;
-            left: auto !important;
-            right: calc(var(--custom-message-margin-horizontal) - var(--custom-message-avatar-decoration-size) / 2 + var(--custom-message-avatar-size) / 2);
-            margin-right: calc(var(--chat-avatar-size) * 1.5 + 12px);
-            max-width: calc(100% - var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + 32px);
-        }
-
-        .repliedMessageClickableSpine_c19a55 {
-            right: calc(var(--chat-avatar-size) / 2 * -1 + var(--gutter) * -1 - 4px);
-            left: 100%;
-            bottom: -14px;
-            border-right: var(--spine-width) solid var(--spine-default);
-            border-bottom: 0 solid var(--spine-default);
-            border-left: 0 solid var(--spine-default);
-            border-top: 2px solid var(--spine-default);
-            border-top: var(--spine-width) solid var(--spine-default);
-            border-top-right-radius: 6px;
-            border-top-left-radius: 0px;
-        }
-
-        /* For some reason the class above doesn't apply for me, so this exists */
-        .messageSpine_c19a55:before {
-            right: calc(var(--chat-avatar-size) / 2 * -1 + var(--gutter) * -1 - 18px);
-            left: 100%;
-            bottom: -14px;
-            border-right: var(--spine-width) solid var(--spine-default);
-            border-bottom: 0 solid var(--spine-default);
-            border-left: 0 solid var(--spine-default);
-            border-top: 2px solid var(--spine-default);
-            border-top: var(--spine-width) solid var(--spine-default);
-            border-top-right-radius: 6px;
-            border-top-left-radius: 0px;
-            margin-left: 4px;
-        }
+    .contents_c19a55 {
+      justify-items: end;
     }
 
-    .buttonContainer_c19a55 {
-        right: auto;
-        left: 0;
-
-        .container__040f0 {
-            right: auto;
-            left: 56px;
-        }
+    .avatar_c19a55 {
+      left: auto !important;
+      right: var(--custom-message-margin-horizontal);
     }
 
-    .reactions__23977 {
-        align-content: flex-end;
-        justify-content: flex-end;
+    .avatarDecoration_c19a55 {
+      left: auto !important;
+      right: calc(var(--custom-message-margin-horizontal) - var(--custom-message-avatar-decoration-size) / 2 + var(--custom-message-avatar-size) / 2);
     }
 
+    .contents_c19a55>.messageContent_c19a55 {
+      border-radius: 10px 0px 0px 10px;
+      background-color: var(--brand-500);
+    }
+
+    &.groupStart__5126c .messageContent_c19a55 {
+      border-radius: 10px 10px 0px 10px;
+    }
+
+    .container_b7e1cb>* {
+      justify-self: end !important;
+      align-self: end !important;
+    }
+
+    .container__8e577 {
+      justify-self: end;
+    }
+
+    .visualMediaItemContainer_f4758a {
+      width: auto;
+    }
+
+    .contents_c19a55 {
+      justify-self: end;
+    }
+
+    &.hasReply_c19a55 {
+      padding-top: 22px;
+    }
+
+    .repliedMessage_c19a55 {
+      position: absolute;
+      flex-direction: row;
+      top: 0px;
+      left: auto !important;
+      right: calc(var(--custom-message-margin-horizontal) - var(--custom-message-avatar-decoration-size) / 2 + var(--custom-message-avatar-size) / 2);
+      margin-right: calc(var(--chat-avatar-size) * 1.5 + 12px);
+      max-width: calc(100% - var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + 32px);
+    }
+
+    .repliedMessageClickableSpine_c19a55 {
+      right: calc(var(--chat-avatar-size) / 2 * -1 + var(--gutter) * -1 - 4px);
+      left: 100%;
+      bottom: -14px;
+      border-right: var(--spine-width) solid var(--spine-default);
+      border-bottom: 0 solid var(--spine-default);
+      border-left: 0 solid var(--spine-default);
+      border-top: 2px solid var(--spine-default);
+      border-top: var(--spine-width) solid var(--spine-default);
+      border-top-right-radius: 6px;
+      border-top-left-radius: 0px;
+    }
+
+    /* For some reason the class above doesn't apply for me, so this exists */
+    .messageSpine_c19a55:before {
+      right: calc(var(--chat-avatar-size) / 2 * -1 + var(--gutter) * -1 - 18px);
+      left: 100%;
+      bottom: -14px;
+      border-right: var(--spine-width) solid var(--spine-default);
+      border-bottom: 0 solid var(--spine-default);
+      border-left: 0 solid var(--spine-default);
+      border-top: 2px solid var(--spine-default);
+      border-top: var(--spine-width) solid var(--spine-default);
+      border-top-right-radius: 6px;
+      border-top-left-radius: 0px;
+      margin-left: 4px;
+    }
+  }
+
+  .buttonContainer_c19a55 {
+    right: auto;
+    left: 0;
+
+    .container__040f0 {
+      right: auto;
+      left: 56px;
+    }
+  }
+
+  .reactions__23977 {
+    align-content: flex-end;
+    justify-content: flex-end;
+  }
+
+  .cozy_c19a55 .header_c19a55 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+  }
+  .cozy_c19a55 .headerText_c19a55 {
+    margin-right: 0;
+    margin-left: 0.25em;
+  }
+  .cozy_c19a55 .timestamp_c19a55 {
+    margin-left: 0;
+    margin-right: 0.25em;
+  }
 }
 
 .vc-reply-timestamp {
